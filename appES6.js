@@ -7,7 +7,6 @@ class Book {
 }
 
 class UI {
-  constructor() {}
   addBookToList(book) {
     const list = document.querySelector('#book-list');
     const row = document.createElement('tr');
