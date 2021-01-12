@@ -32,7 +32,9 @@ UI.prototype.showAlert = function(message, className){
     div.className = `alert ${className}`;
     div.appendChild(document.createTextNode(message));
     container.insertBefore(div, form);
-
+    setTimeout(() =>{
+        document.querySelector('.alert').remove();
+    }, 2500);
 }
 
 document.querySelector('#book-form').addEventListener('submit', function(e){
