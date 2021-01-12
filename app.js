@@ -19,6 +19,13 @@ UI.prototype.addBookToList = function(book){
     list.appendChild(row)
 }
 
+UI.prototype.clearFields = function(){
+   document.querySelector('#author').value = '';
+   document.querySelector('#title').value = '';
+   document.querySelector('#isbn').value = '';
+          
+}
+
 document.querySelector('#book-form').addEventListener('submit', function(e){
     const author = document.querySelector('#author').value;
           title = document.querySelector('#title').value;
@@ -29,5 +36,6 @@ document.querySelector('#book-form').addEventListener('submit', function(e){
 
     const bookUI = new UI();
     bookUI.addBookToList(book);
+    bookUI.clearFields();
     e.preventDefault();
 });
